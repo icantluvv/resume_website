@@ -1,0 +1,210 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    padding-top: 1.875em;
+
+    flex-grow: 1;
+    overflow-y: auto;
+
+    .container1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 2.25em;
+
+
+        .title_about{
+            font-family: CofoLight;
+            font-size: 2em;
+        }
+    }
+
+    .container2{
+
+        display: flex;
+        height: 100%;
+        height: 80;
+        width: 100%;
+
+        .about_image{
+            height: 100%;
+            width: calc(35.417vw * 1.37);
+
+            .me{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover; 
+                    object-position: bottom; 
+            }
+        }
+
+        .about_messages{
+            padding-top: 17vh;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+
+            .some_message{
+                display: flex;
+                align-items: center;
+                width: auto;
+                justify-content: start;
+                padding-left: 8vw;
+                padding-bottom: 2.5vh;
+            }
+
+            .some_message p{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                height: 60px;
+                border-radius: 30px;
+                width: 166px;
+                font-family: CofoLight;
+                font-size: 18px;
+                color: white;
+                background-color: black;
+
+            }
+
+
+            .my_message1{
+                width: 100%;
+                height: 104px;
+                display: flex;
+                justify-content: end;
+                align-items: center; 
+                padding-right: 7vw;
+                width: auto;
+                padding-bottom: 1.5em;
+
+                .cont_for_text{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+                    background-color: #D9D9D9;
+                    height: 104px;
+                    width: auto;
+                    border-radius: 30px;
+                    padding-left: 19px;
+                    padding-right: 19px;
+                }
+                
+                p{
+                    width: 100%;
+                    display: flex;
+                    justify-content: start;
+                    font-family: CofoLight;
+                    font-size: 18px;
+                }
+            }
+
+            .my_message2{
+                width: 100%;
+                height: 126px;
+                display: flex;
+                justify-content: end;
+                align-items: center; 
+                padding-right: 7vw;
+                width: auto;
+                padding-bottom: 1.5em;
+
+                .cont_for_text{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    background-color: #D9D9D9;
+                    height: 126px;
+                    width: auto;
+                    border-radius: 30px;
+                    padding-left: 19px;
+                    padding-right: 19px;
+                }
+                
+                p{
+                    width: 415px;
+                    display: flex;
+                    font-family: CofoLight;
+                    font-size: 18px;
+                }
+            }
+            
+            .my_message3{
+                
+                width: 100%;
+                height: 82px;
+                display: flex;
+                justify-content: end;
+                align-items: center; 
+                padding-right: 7vw;
+                width: auto;
+                padding-bottom: 1.5em;
+
+                .cont_for_text{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    background-color: #D9D9D9;
+                    height: 82px;
+                    border-radius: 30px;
+                    padding-left: 19px;
+                    padding-right: 19px;
+                }
+                
+                p{
+                    width: 392px;
+                    display: flex;
+                    font-family: CofoLight;
+                    font-size: 18px;
+                }
+            }
+                        
+            .my_message_new{
+                
+                width: 100%;
+                height: 30px;
+                display: flex;
+                justify-content: end;
+                align-items: center; 
+                padding-right: 7vw;
+                width: auto;
+
+                .cont_for_text{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-around;
+                    background-color: #D9D9D9;
+                    height: 30px;
+                    width: 40px;
+                    border-radius: 30px;
+                    padding-left: 13px;
+                    padding-right: 13px;
+                }
+
+                .circle1, .circle2, .circle3{
+                    width: 9px;
+                    height: 9px;
+                    border-radius: 50%;
+                    background-color: white;
+                }
+            }
+        }
+    }
+
+    .container3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 2.25em;
+        padding-top: 2.25em;
+    
+        .title_about{
+            font-family: CofoLight;
+            font-size: 2em;
+        }
+    }
+}

@@ -13,7 +13,7 @@ const Header = () => {
 
         <nav className={styles.navigation}>
           <li className={styles.cont1}>
-            <a href='#ABOUT ME'>
+            <a href='#about'>
               <p>ABOUT ME</p>
             </a>
           </li>
