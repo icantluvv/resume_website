@@ -19,7 +19,7 @@ const Header = () => {
           </li>
 
           <li className={styles.cont2}>
-            <a href='#STACK'>
+            <a href='#stack'>
               <p>STACK</p>
             </a>
           </li>

@@ -2,9 +2,8 @@
     display: flex;
     flex-direction: column;
     padding-top: 1.875em;
-
-    flex-grow: 1;
-    overflow-y: auto;
+    width: 100%;
+    height: 100%;
 
     .container1{
         display: flex;
@@ -20,7 +19,6 @@
     }
 
     .container2{
-
         display: flex;
         height: 100%;
         height: 80;
@@ -31,19 +29,18 @@
             width: calc(35.417vw * 1.37);
 
             .me{
-                    height: 100%;
-                    width: 100%;
-                    object-fit: cover; 
-                    object-position: bottom; 
+                height: 100%;
+                width: 100%;
+                object-fit: cover; 
+                object-position: bottom; 
             }
         }
 
         .about_messages{
-            padding-top: 17vh;
+            padding-top: 8vh;
             display: flex;
             flex-direction: column;
             width: 100%;
-
 
             .some_message{
                 display: flex;
@@ -66,9 +63,7 @@
                 font-size: 18px;
                 color: white;
                 background-color: black;
-
             }
-
 
             .my_message1{
                 width: 100%;
@@ -170,6 +165,7 @@
                 justify-content: end;
                 align-items: center; 
                 padding-right: 7vw;
+                padding-bottom: 4vh;
                 width: auto;
 
                 .cont_for_text{
@@ -197,14 +193,119 @@
 
     .container3{
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100%;
         padding-bottom: 2.25em;
         padding-top: 2.25em;
-    
-        .title_about{
+
+
+        .title_stack{
             font-family: CofoLight;
             font-size: 2em;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .cards{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        .cards_list{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            padding-left: 5em;
+            padding-right: 5em;
+            width: 100%;
+
+            .for_line{
+                position: relative;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 100%;
+
+                .hr{
+                    position: absolute;
+                    bottom: -5px;
+                    height: 10px;
+                    width: 120px;
+                    background-color: black;
+                }
+            }
+            
+
+            .card1, .card2, .card3{
+                width: 250px;
+                height: 400px;
+                border: 1px solid black;
+                border-radius: 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                justify-content: end;
+                padding-top: 64px;
+                
+
+                li{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .line{
+                    border: none;
+                    width: 127px;
+                    height: 1px;  
+                    background-color: #D9D9D9;                
+                }
+
+                .html{
+                    width: 119px;
+                    height: 119px;
+                    padding-bottom: 95px;
+                }
+
+                .jsts{
+                    width: 134px;
+                    height: 162px;
+                    padding-bottom: 95px;
+                }
+
+                .css{
+                    width: 119px;
+                    height: 119px;
+                    padding-bottom: 95px;
+                }
+
+                .text_card, .text_card3{
+                    padding-top: 19px;
+                    font-size: 20px;
+                    width: 90%;
+                    font-family: CofoThin;
+                    padding-bottom: 70px;
+                }
+
+                .text_card2{
+                    display: flex;
+                    justify-content: center;
+                    padding-top: 19px;
+                    font-size: 20px;
+                    width: 90%;
+                    font-family: CofoThin;
+                    padding-bottom: 70px;
+                }
+            }
         }
     }
 }

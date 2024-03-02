@@ -59,17 +59,44 @@ const Main = () => {
           
           </div>
 
-          <div className={styles.container3}>
-            <h1 className={styles.title_about}>STACK</h1>
+          <div id="stack" className={styles.container3}>
+            <h1 className={styles.title_stack}>STACK</h1>
           </div>
 
           <div className={styles.cards}>
-            <ul className={styles.cards_list}>
-              <li className={styles.card1}></li>
-              <li className={styles.card2}></li>
-              <li className={styles.card3}></li>
-            </ul>
+
+            <div className={styles.cards_list}>
+              <div className={styles.for_line}>
+
+                <ul className={styles.card1}>
+                  <li><img src="./src/assets/images/html2.png" alt='' className={styles.html}/></li>
+                  <li><hr className={styles.line}/></li>
+                  <li><p className={styles.text_card}>Markup Language HTML5</p></li>
+                </ul>
+                <div className={styles.hr}/>
+              </div>
+              
+
+            <div className={styles.for_line}>
+              <ul className={styles.card2}>
+                <li><img src="./src/assets/images/jsts.png" alt='' className={styles.jsts}/></li>
+                <li><hr className={styles.line}/></li>
+                <li><p className={styles.text_card2}>JavaScript/ TypeScript</p></li>
+              </ul>
+              <div className={styles.hr}/>
+            </div>
+
+            <div className={styles.for_line}>
+              <ul className={styles.card3}>
+                <li><img src="./src/assets/images/css.png" alt='' className={styles.css}/></li>
+                <li><hr className={styles.line}/></li>
+                <li><p className={styles.text_card3}>Decoration Language CSS3</p></li>
+              </ul>
+              <div className={styles.hr}/>
+            </div>
+
           </div>
+        </div>
       </main>
     </div>
   )
