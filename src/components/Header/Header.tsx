@@ -5,36 +5,36 @@ const Header = () => {
     <div>
       <header className={styles.header}>
 
-        <div className={styles.uppertext}>
-          <h1 className={styles.text}>
-              I’m open to suggestions
-          </h1>
-        </div>
-
         <nav className={styles.navigation}>
           <li className={styles.cont1}>
             <a href='#about'>
-              <p>ABOUT ME</p>
+              <p>About me</p>
             </a>
           </li>
 
           <li className={styles.cont2}>
             <a href='#stack'>
-              <p>STACK</p>
+              <p>Stack</p>
             </a>
           </li>
           <li className={styles.cont3}>
             <a href='#EXPERIENCE'>
-              <p>EXPERIENCE</p>
+              <p>Experience</p>
             </a>
           </li>
           <li className={styles.cont5}>
             <a href='#PROJECTS'>
-              <p>PROJECTS</p>
+              <p>Projects</p>
             </a>
           </li>
 
         </nav>
+
+        <div className={styles.uppertext}>
+          <p className={styles.text}>
+              <h1>I’m open to suggestions</h1>
+          </p>
+        </div>
 
       </header>
     </div>

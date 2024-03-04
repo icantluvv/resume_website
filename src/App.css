@@ -43,3 +43,10 @@ li{
     src: 
     url(../src/assets/fonts/CoFoGothic-Regular.otf);
 }
+
+
+@font-face{
+    font-family: Bebas;
+    src: 
+    url(../src/assets/fonts//bebasneueregular.woff);
+}
