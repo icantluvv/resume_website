@@ -1,7 +1,12 @@
+import styles from './Footer.module.scss'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <div>
+      <section id='contact' className={styles.footer}>
+        
+      </section>
+    </div>
   )
 }
 

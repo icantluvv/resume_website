@@ -18,12 +18,12 @@ const Header = () => {
             </a>
           </li>
           <li className={styles.cont3}>
-            <a href='#EXPERIENCE'>
+            <a href='#experience'>
               <p>Experience</p>
             </a>
           </li>
           <li className={styles.cont5}>
-            <a href='#PROJECTS'>
+            <a href='#git'>
               <p>Projects</p>
             </a>
           </li>
@@ -31,9 +31,11 @@ const Header = () => {
         </nav>
 
         <div className={styles.uppertext}>
-          <p className={styles.text}>
+          <a href="#contact">
+            <p className={styles.text}>
               <h1>I’m open to suggestions</h1>
-          </p>
+            </p>
+          </a>
         </div>
 
       </header>

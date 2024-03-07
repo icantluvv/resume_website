@@ -1,21 +1,39 @@
+import { useEffect, useState} from 'react';
 import styles from './Main.module.scss'
 import { useInView } from 'react-intersection-observer';
+import './Carousel';
 
 const Main = () => {
 
+  const { ref: magicSectionRef, inView: magicSectionIsVisible } = useInView({threshold: 0.01});
+  const { ref: magicSectionRef2, inView: magicSectionIsVisible2 } = useInView({threshold: 0.01});
+  const { ref: magicSectionRef3, inView: magicSectionIsVisible3 } = useInView({threshold: 0.01});
 
-  const { ref: magicSectionRef, inView: magicSectionIsVisible } = useInView();
-  const { ref: magicSectionRef2, inView: magicSectionIsVisible2 } = useInView();
+  const [isMagicSectionAnimated, setIsMagicSectionAnimated] = useState(false);
+  const [isFrameworksAnimated, setIsFrameworksAnimated] = useState(false);
+  
+
+  useEffect(() => {
+    if (magicSectionIsVisible && !isMagicSectionAnimated) {
+      setIsMagicSectionAnimated(true);
+    }
+  }, [magicSectionIsVisible, isMagicSectionAnimated]); 
+  
+  useEffect(() => {
+    if (magicSectionIsVisible3 && !isFrameworksAnimated) {
+      setIsFrameworksAnimated(true);
+    }
+  }, [magicSectionIsVisible3, isFrameworksAnimated]); 
 
   return (
     <div>
       <main className={styles.main} >
 
-          <div className={styles.container1} >
+          <head className={styles.container1} >
             <h1 className={styles.title_about}>ABOUT ME</h1>
-          </div>
+          </head>
 
-          <div className={styles.container2}>
+          <section className={styles.container2}>
 
             <ul className={styles.left_side_image_text}>
 
@@ -69,13 +87,13 @@ const Main = () => {
 
               </div>
             </div>
-          
-          </div>
-          <div id="stack" className={styles.container3}>
-            <h1 className={styles.title_stack}> MY STACK</h1>
-          </div>
+          </section>
 
-          <div className={styles.container_4} ref={magicSectionRef}>
+          <head id="stack" className={styles.container3}>
+            <h1 className={styles.title_stack}> MY STACK</h1>
+          </head>
+
+          <section className={styles.container_4} ref={magicSectionRef}>
 
             <div className={styles.cards_list}>
               <div className={styles.for_line}>
@@ -108,14 +126,99 @@ const Main = () => {
             </div>
           </div>
 
-        </div>
+        </section>
 
         
         <section className={styles.container_5} ref={magicSectionRef}>
             <ul className={styles.frame_work_list}>
-              <li ref={magicSectionRef2}><h1 className={`${styles.big_frame_text} ${magicSectionIsVisible ? styles.animate_container : ''}`}>FRAME</h1></li>
-              <li><h1 className={`${styles.big_works_text} ${magicSectionIsVisible ? styles.animate_container2 : ''}`}>WORKS</h1></li>
+              <li><h1 className={`${styles.big_frame_text} ${magicSectionIsVisible ? styles.animate_container : ''}`}>FRAME</h1></li>
+              <li ref={magicSectionRef2}></li>
+              <li><h1 className={`${styles.big_works_text} ${magicSectionIsVisible2 ? styles.animate_container2 : ''}`}>WORKS</h1></li>
             </ul>
+        </section>
+
+        <section className={styles.framworks_section} ref={magicSectionRef3}>
+          
+          <div className={`${styles.frameworks_list} ${magicSectionIsVisible3 ? styles.animate_frameworks_description : ''}`}>
+
+            <div className={styles.nest_element}>
+              <ul>
+                <li className={styles.title_nest}><p>NEST.JS</p></li>
+                <li className={styles.text_nest}><p>Nest.js - it is a framework for creating BackEnd for server Web apps. It expands functional of Express.js</p></li>
+              </ul>
+              <div className={styles.nest_image_container}>
+                <img src="./src/assets/images/nest.png" alt="" className={styles.nest_img}/>
+              </div>
+            </div>
+
+            <div className={styles.next_elemet}>
+              <ul>
+                  <li className={styles.title_next}>NEXT.JS</li>
+                  <li className={styles.text_next}>Next.js - it is a framework for creating FrontEnd part of Web app. It works on React.js</li>
+              </ul>
+              <div className={styles.next_image_container}>
+                <img src="./src/assets/images/next.png" alt="" className={styles.next_img}/>
+              </div>
+            </div>
+
+          </div>
+
+        </section>
+
+        <section className={styles.experience_container}>
+          <h1 id='experience' className={styles.title_experience}>MORE EXPERIENCE</h1>
+          <ul className={styles.carousel}>
+
+            <li className={styles.git}>
+              <h1>Git</h1>
+              <span><img src="" alt="" /></span>
+              <p>All basic git commands are in my baggage. It is the most important part of
+                team code developing
+              </p>
+            </li>
+
+            <li className={styles.agile_scrum}>
+              <h1>Agile/Scrum</h1>
+              <span><img src="" alt="" /></span>
+              <p>I have been study by this two systems in university. I know, what is the life 
+                of project and what members need do for keep it safe
+              </p>
+            </li>
+
+            <li className={styles.figma}>
+              <h1>Figma</h1>
+              <span><img src="" alt="" /></span>
+              <p>I have an experience of working with Figma and other graphic editors. 
+                This Web site design was created by me
+              </p>
+            </li>
+
+            <li className={styles.architecture}>
+              <h1>Architecture MVC</h1>
+              <span><img src="" alt="" /></span>
+              <p></p>
+            </li>
+
+            <li className={styles.teamwork}>
+              <h1>Teamwork</h1>
+              <span><img src="" alt="" /></span>
+              <p></p>
+            </li>
+
+            <li className={styles.english}>
+              <h1>English B2</h1>
+              <span><img src="" alt="" /></span>
+              <p>My English is at B2 level</p>
+            </li>
+
+          </ul>
+
+        </section>
+
+        <section id='git' className={styles.repositories}>
+          <div className={styles.container_8}>
+            <button className={styles.git_button}>GITHUB</button>            
+          </div>
         </section>
 
       </main>
